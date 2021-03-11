@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        FORM VALIDATION
+    </title>
+    <style type="text/css" meia="all">
+        span {
+            width: 175;
+            display: block;
+            float: left;
+        }
+        
+        input {
+            float: left;
+        }
+        
+        p {
+            padding-top: 10px;
+            clear: all;
+        }
+        
+        h2 {
+            padding-top: 20px;
+            clear: all;
+        }
+        
+        label {
+            padding-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CREATING FORM</h1>
+    <form method="POST" action="form.aspx">
+        <h2>E-Mail</h2>
+        <p>
+            <label>
+        <span>
+            E-Mail Input:
+        </span>
+        <input type=email name=emailInput required>
+    </label>
+        </p>
+        <h2>Telephone</h2>
+        <p>
+            <label>
+        <span>
+            Telephone Input:
+        </span>
+        <input type=tel name=telInput required>Oddly,the spec says the browser should do nothing special ...hm...
+    </label>
+        </p>
+        <h2>URL</h2>
+        <p>
+            <label>
+                <span>
+                    URL Input:
+                </span>
+                <input type=url name=urlInput required> 
+            </label>
+        </p>
+
+        <h2>Numeric Value</h2>
+        <p>
+            <label>
+                <span>
+                    Number Input:
+                </span>
+                <input type=number name=numberInput required>
+            </label>
+        </p>
+        <p>
+            <label>
+        <span>
+            Range Input:
+        </span>
+        <input type =range name=rangeInput required value=42>value set to 42. By default values are between 0 to 100
+    </label>
+        </p>
+        <h2>Data List</h2>
+        <p>
+            <label>
+       <span>
+           Data list:
+       </span>
+       <input type=text list=somelist>
+           <datalist id=somelist>
+
+<option label=first value="First"></option>
+<option label=second value="Second"></option>
+<option label=third value="Third"></option>
+
+           </datalist>
+       </input>
+    </label>
+        </p>
+
+
+        <h2>
+            ATTRIBUTES
+        </h2>
+        <p>
+            <label>
+        <span>
+             Autofocus:
+        </span>
+        <input type=text autofocus>
+        
+    </label>
+        </p>
+
+        <p>
+            <label>
+        <span>
+             Pattern
+        </span>
+        <input type=text pattern="^\d{5}(-\d{4})?$">hint:use valid code from zip code
+        
+    </label>
+        </p>
+        <p>
+            <label>
+        <span>
+             Placeholder:
+        </span>
+        <input type=text placeholder="hello ">
+        
+    </label>
+        </p>
+
+        <p>
+            <label>
+        <span>
+             Required:
+        </span>
+        <input type=text required>
+        
+    </label>
+        </p>
+
+        <p>
+            <label>
+        <span>
+             Step:
+        </span>
+        <input type=number step=5>hint:Must be divisible by 5
+        
+    </label>
+        </p>
+
+
+
+        <p><button>Submit</button></p>
+    </form>
+</body>
+
+</html>
